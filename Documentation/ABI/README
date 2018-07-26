@@ -10,6 +10,7 @@ of stability according to the rules described below.
 The different levels of stability are:
 
   stable/
+  
 	This directory documents the interfaces that the developer has
 	defined to be stable.  Userspace programs are free to use these
 	interfaces with no restrictions, and backward compatibility for
@@ -18,6 +19,7 @@ The different levels of stability are:
 	available.
 
   testing/
+  
 	This directory documents interfaces that are felt to be stable,
 	as the main development of this interface has been completed.
 	The interface can be changed to add new features, but the
@@ -32,19 +34,21 @@ The different levels of stability are:
 	layout of the files below for details on how to do this.)
 
   obsolete/
+  
   	This directory documents interfaces that are still remaining in
 	the kernel, but are marked to be removed at some later point in
 	time.  The description of the interface will document the reason
 	why it is obsolete and when it can be expected to be removed.
 
   removed/
+  
 	This directory contains a list of the old interfaces that have
 	been removed from the kernel.
 
 Every file in these directories will contain the following information:
 
-What:		Short description of the interface
-Date:		Date created
+What:		Short description of the interface.
+Date:		Date created.
 KernelVersion:	Kernel version this feature first showed up in.
 Contact:	Primary contact for this interface (may be a mailing list)
 Description:	Long description of the interface and how to use it.
@@ -77,11 +81,13 @@ wish for it to start out in.
 Notable bits of non-ABI, which should not under any circumstances be considered
 stable:
 
-- Kconfig.  Userspace should not rely on the presence or absence of any
+- Kconfig. 
+  Userspace should not rely on the presence or absence of any
   particular Kconfig symbol, in /proc/config.gz, in the copy of .config
   commonly installed to /boot, or in any invocation of the kernel build
   process.
 
-- Kernel-internal symbols.  Do not rely on the presence, absence, location, or
+- Kernel-internal symbols. 
+  Do not rely on the presence, absence, location, or
   type of any kernel symbol, either in System.map files or the kernel binary
   itself.  See Documentation/process/stable-api-nonsense.rst.
